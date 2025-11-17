@@ -1,0 +1,3 @@
+Khi thêm phương thức addDVD(DigitalVideoDisc ...discs), hệ thống sẽ cảnh báo duplicated method in type Cart
+vì về bản chất [] discs và ...discs trong Java đều là khai báo kiểu mảng
+Trong hai phương án này thì lựa chọn phương án nào đều được 

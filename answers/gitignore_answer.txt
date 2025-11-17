@@ -1,0 +1,18 @@
+.gitignore là một file quan trọng sinh ra nhằm bỏ những file không cần thiết phải đẩy lên github, đó có thể là những file được cấu hình 
+riêng cho thiết bị của họ để biên dịch chương trình, đối với những người chung dự án hay là người theo dõi khi muốn kiểm chứng dự án thì 
+không cần thiết phải clone những file đó về.
+Với IntelliJ IDEA, cần thêm:
+.idea/
+*.iml
+out/
+
+Với vscode, cần thêm:
+.vscode/
+
+Nếu lỡ không thêm vào .gitignore, cần thực hiện 3 bước:
+1. git rm --cached -r .settings bin .classpath .project
+câu lệnh này xóa những file được chọn khỏi git, không xóa khỏi máy
+2. git commit ""
+chú thích thay đổi
+3. git push
+đẩy thay đổi

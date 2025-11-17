@@ -16,6 +16,27 @@ public class Cart {
 		}
 	}
 
+	public void addDVD(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+		if (qtyOrdered < MAX_NUMBER_ORDERED - 1) {
+			addDVD(disc1);
+			addDVD(disc2);
+		}
+		else {
+			System.out.println("No enough slots!");
+		}
+	}
+	public void addDVD(DigitalVideoDisc[] discs){
+		int numDisc = discs.length;
+		if (qtyOrdered + numDisc <= 20){
+			for (DigitalVideoDisc disc: discs){
+				addDVD(disc);
+			}
+		}
+		else {
+			System.out.println("No enough slots!");
+		}
+	}
+
 	public void removeDVD(DigitalVideoDisc disc) {
 		if (qtyOrdered != 0 ) {
 			int findIndex;
