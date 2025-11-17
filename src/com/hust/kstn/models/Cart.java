@@ -10,6 +10,7 @@ public class Cart {
 			itemsInCart[qtyOrdered] = disc;
 			qtyOrdered++;
 			System.out.println("Disc added!");
+			print();
 		}
 		else {
 			System.out.println("Cart is full!");
@@ -41,13 +42,14 @@ public class Cart {
 		if (qtyOrdered != 0 ) {
 			int findIndex;
 			for (findIndex = 0; findIndex < qtyOrdered; findIndex++) {
-				if (itemsInCart[findIndex].getTitle().equals(disc.getTitle())) {
+				if (itemsInCart[findIndex].getId() == disc.getId()) {
 					for (int moveIndex = findIndex; moveIndex < qtyOrdered-1; moveIndex++) {
 						itemsInCart[moveIndex] = itemsInCart[moveIndex+1];
 					}
 					itemsInCart[qtyOrdered - 1] = null;
 					qtyOrdered--;
 					System.out.println("DVD removed!");
+					print();
 					break;
 				}
 			}
@@ -69,11 +71,13 @@ public class Cart {
 	}
 	
 	public void print() {
-		System.out.println("=== Total items in cart: " + qtyOrdered + " ===");
-		System.out.println("=== All items in cart ===");
-		for (int index = 0; index < qtyOrdered; index++) {
-			System.out.println("[Title]: " + itemsInCart[index].getTitle() + "; [Price]: " + itemsInCart[index].getCost());
+		System.out.println("==========THE CURRENT CART==========");
+		System.out.println("Total items:" + qtyOrdered);
+		for (int index = 0; index < qtyOrdered; index++){
+			System.out.println(itemsInCart[index].toString());
 		}
+		System.out.println("Subtotal: " + calculateTotalCost() + "$");
+		System.out.println("====================================");
 	}
 	
 }

@@ -25,8 +25,18 @@ public class DigitalVideoDisc {
 	public String getDirector() {
 		return director;
 	}
-	public int gitId() {
+	public int getId() {
 		return id;
+	}
+
+	@Override
+	public String toString(){
+		return "- DVD " + this.id + " - " + this.title + " - " + this.cost + " - " + this.length + " - " + this.category + " - " + this.director;
+	}
+
+	public DigitalVideoDisc(){
+		this.id = nbDigitalVideoDisc;
+		nbDigitalVideoDisc++;
 	}
 	
 	public DigitalVideoDisc(String title) {
