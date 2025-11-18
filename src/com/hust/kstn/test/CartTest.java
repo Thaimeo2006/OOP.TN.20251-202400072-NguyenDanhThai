@@ -1,8 +1,9 @@
 package com.hust.kstn.test;
-import com.hust.kstn.models.DigitalVideoDisc;
-import com.hust.kstn.models.Cart;
+//import com.hust.kstn.models.DigitalVideoDisc;
+//import com.hust.kstn.models.Cart;
 
 public class CartTest {
+    /*
     private static final int MAX_NUM_DISCS = 20;
     public static void main(String[] args){
         Cart fullCart = new Cart();
@@ -28,4 +29,5 @@ public class CartTest {
         Cart goodCart = new Cart();
         goodCart.addDVD(newDVD1);
     }
+    */
 }

@@ -3,12 +3,7 @@ package com.hust.kstn.models;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Book {
-    private int id;
-    private String title;
-    private String category;
-    private int length;
-    private float cost;
+public class Book extends Media {
     
     private static class BookAuthor{
         private String fullName;
@@ -36,31 +31,13 @@ public class Book {
     }
     private List<BookAuthor> authors = new ArrayList<>();
 
-    public Book(int id, String title, String category, int length, float cost, String fullName, int yearOfBirth, String shortBiography){
-        this.id = id;
-        this.title = title;
-        this.category = category;
-        this.length = length;
-        this.cost = cost;
+    public Book(String title, String category, int length, float cost, String fullName, int yearOfBirth, String shortBiography){
+        super(title, category, length, cost);
         setAuthors(fullName, yearOfBirth, shortBiography);
+        
     }
 
-    public int getId(){
-        return id;
-    }
-    public String getTitle(){
-        return title;
-    }
-    public String getCategory(){
-        return category;
-    }
-    public int getLength(){
-        return length;
-    }
-    public float getCost(){
-        return cost;
-    }
-    public void getBookAuthor(){
+    public void printBookAuthor(){
         for (BookAuthor author: authors){
             System.out.println(author.getFullName() + author.getYearOfBirth() + author.getShortBiography());
         }
@@ -72,11 +49,6 @@ public class Book {
 
     @Override
     public String toString(){
-        return "Book[" + this.id + "]["
-        + this.title + "]["
-        + this.cost + "]["
-        + this.category + "]["
-        + this.length + "]"
-        + "\nAuthors: " + this.authors;
+        return this.toString() + "\nAuthors: " + this.authors;
     }
 }

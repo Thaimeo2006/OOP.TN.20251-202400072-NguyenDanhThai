@@ -1,7 +1,8 @@
 package com.hust.kstn;
-import com.hust.kstn.models.*;
+//import com.hust.kstn.models.*;
 
 public class Aims {
+    /*
 	public static void main(String[] args) {
 		Cart currentCart = new Cart();
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("Action", "Avengers: Endgame", 24.99f);
@@ -22,5 +23,5 @@ public class Aims {
 
         System.out.println("\nTotal value of cart: " + currentCart.calculateTotalCost() + "$");
 	}
-
+    */
 }

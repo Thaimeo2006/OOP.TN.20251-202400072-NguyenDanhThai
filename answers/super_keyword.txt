@@ -1,0 +1,3 @@
+super là từ khóa đặc biệt khi làm việc với kế thừa
+"super(title, category, length, cost)": gọi constructor từ lớp cha, gán các thuộc tính chung
+super.operation_(...): gọi các phương thức được định nghĩa trong lớp cha
