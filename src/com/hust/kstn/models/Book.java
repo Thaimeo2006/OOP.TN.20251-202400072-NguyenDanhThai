@@ -31,6 +31,9 @@ public class Book extends Media {
     }
     private List<BookAuthor> authors = new ArrayList<>();
 
+    public Book(){
+        super();
+    }
     public Book(String title, String category, int length, float cost, String fullName, int yearOfBirth, String shortBiography){
         super(title, category, length, cost);
         setAuthors(fullName, yearOfBirth, shortBiography);
@@ -49,6 +52,6 @@ public class Book extends Media {
 
     @Override
     public String toString(){
-        return this.toString() + "\nAuthors: " + this.authors;
+        return "Book" + super.toString() + "\nAuthors: " + this.authors;
     }
 }

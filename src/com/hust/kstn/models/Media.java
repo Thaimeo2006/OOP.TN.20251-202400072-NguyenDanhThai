@@ -24,6 +24,10 @@ public class Media {
         return cost;
     }
 
+    public Media(){
+        this.id = nbMedia;
+        nbMedia++;
+    }
     public Media(String title, String category, int length, float cost){
         this.id = nbMedia;
         nbMedia++;
@@ -35,7 +39,7 @@ public class Media {
 
     @Override
     public String toString(){
-        return "Media[" + this.id + "]["
+        return "[" + this.id + "]["
         + this.title + "]["
         + this.cost + "]["
         + this.category + "]["

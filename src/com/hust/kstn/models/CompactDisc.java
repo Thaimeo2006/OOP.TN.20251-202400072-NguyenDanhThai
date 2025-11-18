@@ -27,7 +27,10 @@ public class CompactDisc extends Disc {
     }
     private List<Track> tracks = new ArrayList<>();
 
-    public CompactDisc(int id, String title, String category, int length, float cost, String director){
+    public CompactDisc(){
+        super();
+    }
+    public CompactDisc(String title, String category, int length, float cost, String director){
         super(title, category, length, cost, director);
     }
 
@@ -43,6 +46,6 @@ public class CompactDisc extends Disc {
     
     @Override
     public String toString(){
-        return this.toString() + "\nTracks: " + this.tracks;
+        return super.toString() + "\nTracks: " + this.tracks;
     }
 }
