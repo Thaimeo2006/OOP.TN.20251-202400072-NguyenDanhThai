@@ -1,5 +1,6 @@
 package com.hust.kstn.test;
-import com.hust.kstn.models.*;
+import com.hust.kstn.models.DigitalVideoDisc;
+import com.hust.kstn.models.Cart;
 
 public class CartTest {
     private static final int MAX_NUM_DISCS = 20;

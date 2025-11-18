@@ -50,6 +50,7 @@ public class Cart {
 					qtyOrdered--;
 					System.out.println("DVD removed!");
 					print();
+					findIndex = -1;
 					break;
 				}
 			}
